@@ -16,10 +16,11 @@ class Base(db.Model):
 class User(Base):
     __tablename__ = 'users'
     name = db.Column(db.String(32))
-    password = db.Column(db.String(64))
+    password = db.Column(db.String)
     info = db.Column(db.String(100))
     email = db.Column(db.String(100))
     is_admin = db.Column(db.SmallInteger)
+
 
 
 class Task(Base):
